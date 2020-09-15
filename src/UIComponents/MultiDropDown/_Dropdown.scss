@@ -1,0 +1,118 @@
+.drop-down {
+  .dropdown_toggle {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    i
+    {
+      margin-left: 10px;
+    }
+  }
+  .dropdown_list {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-animation-name: scaleDrop;
+    animation-name: scaleDrop;
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    padding: 0;
+
+    li {
+      padding: 5px 10px;
+      text-transform: capitalize;
+      position: relative;
+      .sub-arrow
+      {
+        position: absolute;
+        right: 0;
+        top: 8px;
+      }
+      i
+      {
+        width: 20px;
+      }
+      &:hover {
+        color: blue;
+        background: #eee;
+      }
+      &.disabled {
+        pointer-events: none;
+        cursor: none;
+        opacity: 0.5;
+      }
+    }
+  }
+  &.dropright
+  {
+
+  .dropdown_list
+  {
+    right: 0;
+    .menu-list
+    {
+      .dropdown_list
+      {
+        left: auto !important;
+        right: 100% !important;
+        
+      }
+    }
+  }
+  }
+
+}
+.menu-list  
+{
+   > ul
+  {
+    display: none;
+  }
+  &:hover
+  {
+     > ul
+    {
+      display: block;
+    }
+  }
+}
+/*Animation*/
+@keyframes scaleDrop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
