@@ -1,0 +1,25 @@
+// Default imports from shared sass/scss files
+// Remove/comment if not needed
+// 1 - TOOLS - Global SASS Variables
+//---------------------------------------------------
+
+@import "../../assets/sass/1-tools/vars.scss";
+
+// Custom mixin
+@import "../../assets/sass/1-tools/custom-mixin.scss";
+
+.headers {
+  background-color: rgb(243, 235, 243);
+  font-size: 40px;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      list-style: none;
+      background-color: darken(rgb(243, 235, 243), 25);
+      margin: 10px;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+  }
+}
